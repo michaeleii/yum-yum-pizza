@@ -2,6 +2,7 @@ import ICartItem from "./ICartItem";
 
 interface IOrderItem {
   id: string;
+  status: string;
   customer: string;
   phone: string;
   address: string;
