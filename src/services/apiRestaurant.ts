@@ -1,3 +1,4 @@
+import ICartItem from "../interfaces/ICartItem";
 import IMenuItem from "../interfaces/IMenuItem";
 import IOrderItem from "../interfaces/IOrderItem";
 
@@ -21,7 +22,13 @@ export async function getOrder(id: string) {
   return data;
 }
 
-export async function createOrder(newOrder: IOrderItem) {
+export async function createOrder(newOrder: {
+  cart: ICartItem[];
+  priority: boolean;
+  customer: string;
+  phone: string;
+  address: string;
+}) {
   try {
     const res = await fetch(`${API_URL}/order`, {
       method: "POST",
@@ -32,7 +39,7 @@ export async function createOrder(newOrder: IOrderItem) {
     });
 
     if (!res.ok) throw Error();
-    const { data } = await res.json();
+    const { data } = (await res.json()) as { data: IOrderItem };
     return data;
   } catch {
     throw Error("Failed creating your order");
