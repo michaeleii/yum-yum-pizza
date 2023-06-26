@@ -6,7 +6,6 @@ import CreateOrder, { createOrderAction } from "./features/order/CreateOrder";
 import Order, { orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 import Error from "./ui/Error";
-import { updateOrder } from "./services/apiRestaurant";
 import { updateOrderAction } from "./features/order/UpdateOrder";
 
 const router = createBrowserRouter([

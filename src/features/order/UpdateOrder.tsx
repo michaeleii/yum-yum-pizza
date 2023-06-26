@@ -3,7 +3,7 @@ import IOrderItem from "../../interfaces/IOrderItem";
 import Button from "../../ui/Button";
 import { updateOrder } from "../../services/apiRestaurant";
 
-function UpdateOrder({ order }: { order: IOrderItem }) {
+function UpdateOrder() {
   const Fetcher = useFetcher<IOrderItem>();
   return (
     <Fetcher.Form method="PATCH" className="text-right">
