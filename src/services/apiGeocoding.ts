@@ -1,3 +1,10 @@
+interface AddressData {
+  locality?: string;
+  city?: string;
+  postcode?: string;
+  countryName?: string;
+}
+
 export async function getAddress({
   latitude,
   longitude,
@@ -10,6 +17,6 @@ export async function getAddress({
   );
   if (!res.ok) throw Error("Failed getting address");
 
-  const data = await res.json();
+  const data: AddressData = await res.json();
   return data;
 }
