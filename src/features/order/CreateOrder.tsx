@@ -5,6 +5,7 @@ import { createOrder } from "../../services/apiRestaurant";
 import IOrderItem from "../../interfaces/IOrderItem";
 import Button from "../../ui/Button";
 import { useAppSelector } from "../../hook";
+import { getUsername } from "../user/userSlice";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str: string) =>
@@ -38,7 +39,7 @@ const fakeCart = [
 
 function CreateOrder() {
   // const [withPriority, setWithPriority] = useState(false);
-  const username = useAppSelector((state) => state.user.username);
+  const username = useAppSelector(getUsername);
   const navigation = useNavigation();
   const formErrors = useActionData() as Record<string, string>;
 
