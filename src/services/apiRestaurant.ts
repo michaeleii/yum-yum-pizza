@@ -46,7 +46,10 @@ export async function createOrder(newOrder: {
   }
 }
 
-export async function updateOrder(id: string, updateObj: IOrderItem) {
+export async function updateOrder(
+  id: string,
+  updateObj: { priority: boolean }
+) {
   try {
     const res = await fetch(`${API_URL}/order/${id}`, {
       method: "PATCH",

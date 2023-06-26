@@ -4,7 +4,7 @@ import ICartItem from "../../interfaces/ICartItem";
 import { createOrder } from "../../services/apiRestaurant";
 import Button from "../../ui/Button";
 import { useAppDispatch, useAppSelector } from "../../hook";
-import { fetchAddress, getUser, getUsername } from "../user/userSlice";
+import { fetchAddress, getUser } from "../user/userSlice";
 import { clearCart, getCart, getTotalCartPrice } from "../cart/cartSlice";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
