@@ -9,6 +9,7 @@ import { clearCart, getCart, getTotalCartPrice } from "../cart/cartSlice";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
 import { formatCurrency } from "../../utils/helpers";
+import { MapPinIcon } from "@heroicons/react/20/solid";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str: string) =>
@@ -97,7 +98,14 @@ function CreateOrder() {
                 }}
                 disabled={isLoadingAddress}
               >
-                {isLoadingAddress ? "Getting addresss ..." : "Get Position"}
+                {isLoadingAddress ? (
+                  "Getting addresss ..."
+                ) : (
+                  <div className="flex items-center">
+                    <span>Use Current Location</span>
+                    <MapPinIcon className="h-5 w-5" />
+                  </div>
+                )}
               </Button>
             </span>
           )}
