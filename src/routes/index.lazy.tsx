@@ -63,7 +63,7 @@ function AboutSection() {
           <h2 className="text-4xl font-bold md:text-5xl">
             Serving Pizza with Passion Since 1985
           </h2>
-          <p>
+          <p className="font-[400]">
             Our pizza restaurant was founded in 1985 by John & Jane Doe who
             wanted to bring the authentic taste of Italy to our local community.
             Over the years, we have grown and evolved, but our commitment to
