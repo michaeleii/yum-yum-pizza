@@ -16,10 +16,16 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const OrderLazyImport = createFileRoute('/order')()
 const MenuLazyImport = createFileRoute('/menu')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const OrderLazyRoute = OrderLazyImport.update({
+  path: '/order',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/order.lazy').then((d) => d.Route))
 
 const MenuLazyRoute = MenuLazyImport.update({
   path: '/menu',
@@ -43,11 +49,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuLazyImport
       parentRoute: typeof rootRoute
     }
+    '/order': {
+      preLoaderRoute: typeof OrderLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexLazyRoute, MenuLazyRoute])
+export const routeTree = rootRoute.addChildren([
+  IndexLazyRoute,
+  MenuLazyRoute,
+  OrderLazyRoute,
+])
 
 /* prettier-ignore-end */
