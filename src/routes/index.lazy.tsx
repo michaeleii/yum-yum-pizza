@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { Link, createLazyFileRoute } from "@tanstack/react-router";
 
 export const Route = createLazyFileRoute("/")({
   component: Home,
@@ -31,19 +31,23 @@ function HeroSection() {
           Straight out of the oven, straight to you.
         </div>
         <div className="space-x-4 py-4 font-semibold">
-          <Button
-            size="lg"
-            className="rounded-none text-xl drop-shadow-lg hover:bg-yellow-500"
-          >
-            Order now
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-none bg-black/20 text-xl text-white drop-shadow-lg backdrop-blur-sm"
-          >
-            Explore Menu
-          </Button>
+          <Link to="/order">
+            <Button
+              size="lg"
+              className="rounded-none text-xl drop-shadow-lg hover:bg-yellow-500"
+            >
+              Order now
+            </Button>
+          </Link>
+          <Link to="/menu">
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-none bg-black/20 text-xl text-white drop-shadow-lg backdrop-blur-sm"
+            >
+              Explore Menu
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -81,19 +85,23 @@ function CTASection() {
     <section className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 rounded-lg border bg-stone-700 px-6 py-20 text-white md:flex-row">
       <h2 className="text-4xl font-bold md:text-5xl">Ready to Order?</h2>
       <div className="space-x-6">
-        <Button
-          size="lg"
-          className="rounded-none text-xl shadow-md hover:bg-yellow-500"
-        >
-          Order now
-        </Button>
-        <Button
-          size="lg"
-          variant="outline"
-          className="rounded-none bg-transparent text-xl shadow-md"
-        >
-          Explore Menu
-        </Button>
+        <Link to="/order">
+          <Button
+            size="lg"
+            className="rounded-none text-xl shadow-md hover:bg-yellow-500"
+          >
+            Order now
+          </Button>
+        </Link>
+        <Link to="/menu">
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-none bg-transparent text-xl shadow-md"
+          >
+            Explore Menu
+          </Button>
+        </Link>
       </div>
     </section>
   );
