@@ -1,5 +1,15 @@
 import { Link } from "@tanstack/react-router";
 
+import {
+  Drawer,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Button } from "./ui/button";
+
 export default function Navbar() {
   return (
     <header className="bg-primary shadow-lg">
@@ -29,6 +39,21 @@ export default function Navbar() {
           >
             Order
           </Link>
+          <Drawer>
+            <DrawerTrigger>Cart</DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle className="flex items-baseline gap-2">
+                  <span className="text-4xl">
+                    Cart <span className="font-medium">(2)</span>
+                  </span>
+                </DrawerTitle>
+              </DrawerHeader>
+              <DrawerFooter>
+                <Button>Order Now</Button>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
         </nav>
       </div>
     </header>
