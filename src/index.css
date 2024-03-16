@@ -48,3 +48,12 @@
     --ring: 35.5 91.7% 32.9%;
   }
 }
+
+@layer components {
+  .hero-section {
+    max-height: calc(100dvh - 80px);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
