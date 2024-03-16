@@ -9,6 +9,12 @@ function Home() {
   return (
     <main>
       <HeroSection />
+      <section className="mx-auto max-w-xl py-20">
+        <div className="flex justify-between gap-6">
+          <p>Simply Delicious</p>
+          <h2></h2>
+        </div>
+      </section>
     </main>
   );
 }
