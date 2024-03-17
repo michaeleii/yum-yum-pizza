@@ -6,6 +6,7 @@ import {
   extras,
   feastPizzas,
 } from "@/data/menu";
+import { useCartStore } from "@/store/cart-store";
 
 import { createLazyFileRoute } from "@tanstack/react-router";
 
@@ -65,6 +66,11 @@ function MenuSection({
 }
 
 function AddToCartMenuItem({ pizza }: { pizza: MenuItem }) {
+  const addToCart = useCartStore((s) => s.add);
+
+  const handleAddToMenu = (pizza: MenuItem) => {
+    addToCart({ ...pizza, quantity: 1 });
+  };
   return (
     <article
       key={pizza.name}
@@ -78,11 +84,14 @@ function AddToCartMenuItem({ pizza }: { pizza: MenuItem }) {
       <div className="flex flex-1 flex-col justify-between gap-6 px-4 py-3">
         <div className="mt-4 flex justify-between gap-6">
           <h3 className="text-2xl font-bold">{pizza.name}</h3>
-          <p className="text-xl">$12.99</p>
+          <p className="text-xl">${pizza.price}</p>
         </div>
         <p className="text-sm">{pizza.ingredients}</p>
         <div>
-          <Button className="w-full bg-stone-700 text-white hover:bg-yellow-700 md:w-fit">
+          <Button
+            className="w-full bg-stone-700 text-white hover:bg-yellow-700 md:w-fit"
+            onClick={() => handleAddToMenu(pizza)}
+          >
             Add to Cart
           </Button>
         </div>

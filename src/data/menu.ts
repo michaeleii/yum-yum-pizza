@@ -7,6 +7,7 @@ import BaconMushroom from "/menu/classic/bacon_mushroom.jpeg";
 import Veggie from "/menu/classic/veggie.jpeg";
 
 export type MenuItem = {
+  price: number;
   name: string;
   ingredients?: string;
   image: string;
@@ -17,36 +18,43 @@ export const classicPizzas: MenuItem[] = [
     name: "Cheese With White Sauce",
     ingredients: "Creamy White Garlic Sauce, Mozzarella, Cheddar",
     image: CheeseWhiteSauce,
+    price: 12.99,
   },
   {
     name: "Cheese With Tomato Sauce",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Cheddar",
     image: CheeseTomatoSauce,
+    price: 11.99,
   },
   {
     name: "Pepperoni",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Pepperoni",
     image: Pepperoini,
+    price: 13.99,
   },
   {
     name: "Hawaiian",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Ham, Pineapple",
     image: Hawaiian,
+    price: 14.99,
   },
   {
     name: "Beef",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Beef",
     image: Beef,
+    price: 13.99,
   },
   {
     name: "Bacon Mushroom",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Bacon, Mushroom",
     image: BaconMushroom,
+    price: 14.99,
   },
   {
     name: "Veggie",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Mushroom, Onion, Capsicum",
     image: Veggie,
+    price: 12.99,
   },
 ];
 
@@ -65,51 +73,60 @@ export const feastPizzas: MenuItem[] = [
     name: "BBQ Chicken Bacon Feast",
     ingredients: "BBQ Sauce, Mozzarella, Chicken, Bacon, Onion",
     image: BBQChickenBaconFeast,
+    price: 15.99,
   },
   {
     name: "Butter Chicken Feast",
     ingredients: "Butter Chicken Sauce, Mozzarella, Chicken, Capsicum, Onion",
     image: ButterChickenFeast,
+    price: 14.99,
   },
   {
     name: "Combo Feast",
     ingredients:
       "Zesty Tomato Sauce, Mozzarella, Pepperoni, Ham, Mushroom, Capsicum, Onion",
     image: ComboFeast,
+    price: 16.99,
   },
   {
     name: "Fiesty Feast",
     ingredients:
       "Zesty Tomato Sauce, Mozzarella, Pepperoni, Beef, Capsicum, Onion, Jalapeno",
     image: FiestyFeast,
+    price: 17.99,
   },
   {
     name: "Italian Feast",
     ingredients:
       "Zesty Tomato Sauce, Mozzarella, Pepperoni, Ham, Mushroom, Capsicum, Onion, Olives",
     image: ItalianFeast,
+    price: 18.99,
   },
   {
     name: "Meat Lover Feast",
     ingredients: "Zesty Tomato Sauce, Mozzarella, Pepperoni, Ham, Beef, Bacon",
     image: MeatLoverFeast,
+    price: 19.99,
   },
   {
     name: "Mediterranean Feast",
     ingredients:
       "Zesty Tomato Sauce, Mozzarella, Feta, Spinach, Capsicum, Onion, Olives",
     image: MediterraneanFeast,
+    price: 17.99,
   },
   {
     name: "Pesto Feast",
     ingredients: "Pesto Sauce, Mozzarella, Chicken, Mushroom, Capsicum, Onion",
     image: PestoFeast,
+    price: 15.99,
   },
   {
     name: "Veggie Feast",
     ingredients:
       "Zesty Tomato Sauce, Mozzarella, Mushroom, Capsicum, Onion, Olives",
     image: VeggieFeast,
+    price: 16.99,
   },
 ];
 
@@ -125,30 +142,37 @@ export const drinks: MenuItem[] = [
   {
     name: "Pepsi",
     image: Pepsi,
+    price: 1.99,
   },
   {
     name: "Diet Pepsi",
     image: DietPepsi,
+    price: 1.99,
   },
   {
     name: "7Up",
     image: SevenUp,
+    price: 1.99,
   },
   {
     name: "Mountain Dew",
     image: MountainDew,
+    price: 1.99,
   },
   {
     name: "Mug",
     image: Mug,
+    price: 1.99,
   },
   {
     name: "Brisk",
     image: Brisk,
+    price: 1.99,
   },
   {
     name: "Orange Crush",
     image: Crush,
+    price: 1.99,
   },
 ];
 
@@ -160,13 +184,16 @@ export const extras: MenuItem[] = [
   {
     name: "Cheesy Bread",
     image: CheesyBread,
+    price: 4.99,
   },
   {
     name: "Chicken Wings",
     image: ChickenWings,
+    price: 6.99,
   },
   {
     name: "Brownie",
     image: Brownie,
+    price: 3.99,
   },
 ];

@@ -76,7 +76,7 @@ function MenuItem({ pizza }: { pizza: MenuItem }) {
       <div className="flex flex-1 flex-col justify-between gap-6 px-4 py-3">
         <div className="mt-4 flex justify-between gap-6">
           <h3 className="text-2xl font-bold">{pizza.name}</h3>
-          <p className="text-xl">$12.99</p>
+          <p className="text-xl">${pizza.price}</p>
         </div>
         <p className="text-sm">{pizza.ingredients}</p>
       </div>
