@@ -11,6 +11,11 @@ export const Route = createRootRoute({
       <Suspense>
         <TanStackRouterDevtools />
       </Suspense>
+      <footer>
+        <div className="mt-20 bg-primary py-10 text-center text-xl">
+          &copy; {new Date().getFullYear()} Yum Yum Pizza
+        </div>
+      </footer>
     </>
   ),
 });
