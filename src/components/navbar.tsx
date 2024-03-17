@@ -79,12 +79,24 @@ export function CartSheet({
 }) {
   return (
     <Sheet>
-      {items.length > 0 && <SheetTrigger>Cart ({totalItems})</SheetTrigger>}
+      {items.length > 0 && (
+        <SheetTrigger className="flex items-center gap-1">
+          <ShoppingBagIcon />{" "}
+          <span className="mb-5 inline-flex h-3 w-3 items-center justify-center rounded-full bg-green-700 p-3 text-sm text-white">
+            <span>{totalItems}</span>
+          </span>
+        </SheetTrigger>
+      )}
       <SheetContent className="overflow-auto">
         <SheetHeader>
-          <SheetTitle className="flex items-baseline gap-2">
-            <span className="text-xl">
-              Cart {items.length > 0 && <span>({totalItems})</span>}
+          <SheetTitle className="flex items-end gap-2">
+            <span className="flex items-center gap-1 text-xl">
+              <ShoppingBagIcon />{" "}
+              {items.length > 0 && (
+                <span className="mb-5 inline-flex h-3 w-3 items-center justify-center rounded-full bg-green-700 p-3 text-sm text-white">
+                  <span>{totalItems}</span>
+                </span>
+              )}
             </span>
           </SheetTitle>
         </SheetHeader>
@@ -119,6 +131,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ShoppingBagIcon } from "lucide-react";
 
 function CartDrawer({
   items,
@@ -131,12 +144,24 @@ function CartDrawer({
 }) {
   return (
     <Drawer>
-      {items.length > 0 && <DrawerTrigger>Cart ({totalItems})</DrawerTrigger>}
+      {items.length > 0 && (
+        <DrawerTrigger className="flex items-center gap-1">
+          <ShoppingBagIcon />{" "}
+          <span className="mb-5 inline-flex h-3 w-3 items-center justify-center rounded-full bg-green-700 p-3 text-sm text-white">
+            <span>{totalItems}</span>
+          </span>
+        </DrawerTrigger>
+      )}
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle className="flex items-baseline gap-2">
-            <span className="text-xl">
-              Cart {items.length > 0 && <span>({totalItems})</span>}
+          <DrawerTitle className="flex items-baseline gap-1">
+            <span className="flex items-center gap-1 text-xl">
+              <ShoppingBagIcon />{" "}
+              {items.length > 0 && (
+                <span className="mb-5 inline-flex h-3 w-3 items-center justify-center rounded-full bg-green-700 p-3 text-sm text-white">
+                  <span>{totalItems}</span>
+                </span>
+              )}
             </span>
           </DrawerTitle>
         </DrawerHeader>
