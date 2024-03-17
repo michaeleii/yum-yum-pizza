@@ -25,12 +25,12 @@ function HeroSection() {
         alt="Tasty pizza"
       />
       <div className="absolute inset-0 bg-black/50"></div>
-      <div className="absolute left-16 top-1/2 z-10 -translate-y-1/2 text-4xl font-bold md:text-6xl">
+      <div className="absolute left-16 top-1/2 z-10 -translate-y-1/2 text-3xl font-bold sm:text-4xl md:text-6xl">
         <div className="mb-4 text-white">The best pizza.</div>
         <div className="text-yellow-400">
           Straight out of the oven, straight to you.
         </div>
-        <div className="space-x-4 py-4 font-semibold">
+        <div className="hidden space-x-4 py-4 font-semibold md:block">
           <Link to="/order">
             <Button
               size="lg"
@@ -84,11 +84,11 @@ function CTASection() {
   return (
     <section className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 rounded-lg border bg-stone-700 px-6 py-20 text-white md:flex-row">
       <h2 className="text-4xl font-bold md:text-5xl">Ready to Order?</h2>
-      <div className="space-x-6">
+      <div className="flex w-full flex-col gap-6 md:w-fit md:flex-row">
         <Link to="/order">
           <Button
             size="lg"
-            className="rounded-none text-xl shadow-md hover:bg-yellow-500"
+            className="w-full rounded-none text-xl shadow-md hover:bg-yellow-500"
           >
             Order now
           </Button>
@@ -97,7 +97,7 @@ function CTASection() {
           <Button
             size="lg"
             variant="outline"
-            className="rounded-none bg-transparent text-xl shadow-md"
+            className="w-full rounded-none bg-transparent text-xl shadow-md"
           >
             Explore Menu
           </Button>
