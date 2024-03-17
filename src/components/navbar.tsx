@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import { Button } from "./ui/button";
-import { CartItem, useCartStore } from "@/store/cart-store";
+import { type CartItem, useCartStore } from "@/store/cart-store";
 import { useMediaQuery } from "usehooks-ts";
 
 export default function Navbar() {

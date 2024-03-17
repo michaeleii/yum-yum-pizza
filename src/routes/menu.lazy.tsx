@@ -1,5 +1,5 @@
 import {
-  MenuItem,
+  type MenuItem,
   classicPizzas,
   drinks,
   extras,

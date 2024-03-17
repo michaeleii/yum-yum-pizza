@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
-  MenuItem,
+  type MenuItem,
   classicPizzas,
   drinks,
   extras,
