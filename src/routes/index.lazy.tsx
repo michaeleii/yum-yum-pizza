@@ -73,7 +73,7 @@ function AboutSection() {
         <img
           src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Pizza"
-          className="max-w-xl rounded-md object-cover"
+          className="w-full max-w-xl rounded-md object-cover"
         />
       </div>
     </section>
@@ -184,8 +184,6 @@ function TestominalsSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="border-none" />
-        <CarouselNext className="border-none" />
       </Carousel>
     </section>
   );
