@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Yum Yum Pizza
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pizza restaurant website built with React and Tanstack Router.
 
-Currently, two official plugins are available:
+## Motivation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was inspired by my love for pizza and my desire to create a visually stunning landing page for a business. In addtion, I wanted to challenge myself to build a website using the new Nextjs app router, Tailwind CSS, and TypeScript.
 
-## Expanding the ESLint configuration
+## Learning Objectives
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Utilizing Nextjs’s new app router and React Server Components to fetch data on the server.
+- Styling with Tailwind CSS to create a visually appealing website.
+- Adding type safety to code using Typescript to catch errors.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Menu: A list of pizzas with images, descriptions, and prices.
+- Online Ordering: Customers can add pizzas to their cart
+- Cart: Customers can view their cart and remove items
