@@ -21,7 +21,7 @@ function HeroSection() {
     <section className="relative">
       <img
         className="hero-section -z-10"
-        src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+        src="/pizza-hero.jpg"
         alt="Tasty pizza"
       />
       <div className="absolute inset-0 bg-black/50"></div>
